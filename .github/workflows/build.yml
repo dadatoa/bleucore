@@ -81,13 +81,12 @@ jobs:
       #     just ostree-rechunk \
       #       ${IMAGE_NAME} \
       #       ${DEFAULT_TAG}
-
       # If you are feeling adventurous, use the new distro agnostic rechunker
       # https://github.com/coreos/chunkah
       # You can delete the Rechunk with rpm-ostree portion then if you use this
       - name: Rechunk with Chunkah
-       id: rechunk
-       run: |
+        id: rechunk
+        run: |
          just rechunk \
            ${IMAGE_NAME} \
            ${DEFAULT_TAG}
